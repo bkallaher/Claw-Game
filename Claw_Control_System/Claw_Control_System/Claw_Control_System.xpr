@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="C:/Users/bkallahe/Downloads/Claw_Control_System/Claw_Control_System/Claw_Control_System.xpr">
+<Project Version="7" Minor="14" Path="C:/Users/bkallahe/Documents/git/Claw-Game/Claw_Control_System/Claw_Control_System/Claw_Control_System.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a2863b2e6fe142e5ada33f864164e071"/>
@@ -20,8 +20,8 @@
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../Documents/IPforVivado/DigiLED_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../Documents/IPforVivado/vivado-library"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../IPforVivado/DigiLED_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../IPforVivado/vivado-library"/>
     <Option Name="EnableCoreContainer" Val="TRUE"/>
     <Option Name="XPMLibraries" Val="XPM_CDC"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
