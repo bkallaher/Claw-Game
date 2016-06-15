@@ -1,0 +1,9 @@
+*.sim/
+*.cache/
+*.runs/
+*.ip_user_files/
+!*.sdk/claw_led/*
+*.log
+*.sdk/
+*.hw/
+*.jou
