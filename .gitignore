@@ -7,4 +7,4 @@
 *.hw/
 *.jou
 *.lock
-!*.sdk/claw_led/*
+!*.sdk/claw_led/
