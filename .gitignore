@@ -2,9 +2,9 @@
 *.cache/
 *.runs/
 *.ip_user_files/
-!*.sdk/claw_led/*
 *.log
-*.sdk/
+*.sdk
 *.hw/
 *.jou
 *.lock
+!*.sdk/claw_led/*
