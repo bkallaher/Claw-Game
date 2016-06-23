@@ -3,8 +3,13 @@
 *.runs/
 *.ip_user_files/
 *.log
-*.sdk
+*webtalk/*
+*.metadata/
+*_bsp/
+*_hw_*/
+*Temp*/
+*elf.tcl
 *.hw/
 *.jou
 *.lock
-!*.sdk/claw_led/
+! Claw_LED_strips/Claw_LED_strips.sdk/claw_led/
