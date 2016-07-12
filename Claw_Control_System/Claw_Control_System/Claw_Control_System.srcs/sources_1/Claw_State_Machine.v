@@ -60,14 +60,14 @@ module Claw_State_Machine(
     localparam open_claw_two = 5'b1100;
     localparam db_state = 5'b10000;
     
-    //localparam timer_seconds = 10;
+    localparam timer_seconds = 3;
     
-   // integer timer=0;
+    integer timer=0;
 
     reg [4:0] present_state, next_state;
     assign state_out = present_state;
-//    reg timer_en=0;
-//    reg times_up=0;
+    reg timer_en=0;
+    reg times_up=0;
     initial present_state = wait_state;
     initial next_state = wait_state;
     
@@ -115,25 +115,26 @@ module Claw_State_Machine(
     .db_signal(down_limit_db)
     );
     
-//    always @ (posedge(clk))
-//    begin
-//        if (timer_en==1)
-//        begin
-//            if(timer>=timer_seconds*100000000)
-//                times_up=1;
-//            else
-//            begin
-//                timer = timer+1;
-//                times_up=0;
-//            end
-//        end 
-//        else
-//        begin
-//            timer = 0;
-//            times_up=0;
-//        end
+    always @ (posedge(clk))
+    begin
+        if (timer_en==1)
+        begin
+            if(timer>=timer_seconds*100000000)
+                times_up=1;
+            else
+            begin
+                timer = timer+1;
+                times_up=0;
+            end
+        end 
+        else
+        begin
+            timer = 0;
+            times_up=0;
+        end
            
-//    end
+    end
+    
     always @ (posedge(clk)
     /*present_state, 
                 rst, 
@@ -220,13 +221,16 @@ module Claw_State_Machine(
                     end
                 open_claw_one:
                     begin
-//                        timer_en=0;
+                        timer_en=1;
                         next_state = move_down;
                     end
                 move_down:
                     begin
-                        if (down_limit_db == 1'b1)
-                            next_state = close_claw_one;        
+                        if (down_limit_db == 1'b1 || times_up == 1)
+                        begin
+                            timer_en = 0;
+                            next_state = close_claw_one;
+                        end        
                     end
                 close_claw_one:
                     next_state = move_up;
