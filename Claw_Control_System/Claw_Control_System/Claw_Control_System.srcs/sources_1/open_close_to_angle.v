@@ -36,7 +36,7 @@ module open_close_to_angle(
         case (value)
         // Close
         0:
-        angle = 9'd110;
+        angle = 9'd75;
         // Open
         1:
         angle = 9'd130;      

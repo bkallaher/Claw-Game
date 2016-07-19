@@ -60,7 +60,7 @@ module Claw_State_Machine(
     localparam open_claw_two = 5'b1100;
     localparam db_state = 5'b10000;
     
-    localparam timer_seconds = 3;
+    localparam timer_seconds = 4;
     
     integer timer=0;
 

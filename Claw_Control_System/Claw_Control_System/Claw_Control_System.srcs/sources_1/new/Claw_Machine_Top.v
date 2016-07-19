@@ -125,7 +125,7 @@ module Claw_Machine_Top(
             );
             
         claw_control servo_control(
-            .claw_open(claw_net),
+            .claw_open(~claw_net),
             .clk(clk),
             .clr(rst),
             .PWM(PWM)
